@@ -23,7 +23,7 @@ namespace GeneralStore.MVC.Models
         public decimal Price { get; set; }
 
         [Required]
-        [Display(Name= "It is food")]
+        [Display(Name= "Is it food?")]
         public bool IsFood { get; set; }
     }
 }

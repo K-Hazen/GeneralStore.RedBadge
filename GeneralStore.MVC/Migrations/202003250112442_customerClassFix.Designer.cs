@@ -7,13 +7,13 @@ namespace GeneralStore.MVC.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class addingCustomerTable : IMigrationMetadata
+    public sealed partial class customerClassFix : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(addingCustomerTable));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(customerClassFix));
         
         string IMigrationMetadata.Id
         {
-            get { return "202003241755373_addingCustomerTable"; }
+            get { return "202003250112442_customerClassFix"; }
         }
         
         string IMigrationMetadata.Source

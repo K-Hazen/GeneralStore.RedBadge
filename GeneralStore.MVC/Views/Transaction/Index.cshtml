@@ -1,0 +1,62 @@
+﻿@model IEnumerable<GeneralStore.MVC.Models.Transaction>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Transaction List</h2>
+
+
+<p>
+    @Html.ActionLink("Add Transaction", "Create")
+</p>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Customer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateOfTransaction)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalCost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductCount)
+        </th>
+    </tr>
+
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Product.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Customer.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateOfTransaction)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalCost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductCount)
+            </td>
+            <td>
+
+                @Html.ActionLink("Change", "Edit", new { id = item.TransactionID }) |
+                @Html.ActionLink("More Info", "Details", new { id = item.TransactionID }) |
+                @Html.ActionLink("Remove", "Delete", new { id = item.TransactionID }) |
+            </td>
+        </tr>
+
+    }
+
+</table>

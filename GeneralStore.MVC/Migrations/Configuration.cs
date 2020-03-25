@@ -10,7 +10,6 @@ namespace GeneralStore.MVC.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "GeneralStore.MVC.Models.ApplicationDbContext";
         }
 
         protected override void Seed(GeneralStore.MVC.Models.ApplicationDbContext context)

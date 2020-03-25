@@ -26,6 +26,7 @@ namespace GeneralStore.MVC.Controllers
         public ActionResult Create()
         {
             return View();
+
         }
 
         //Post: Customer
